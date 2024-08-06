@@ -7,6 +7,12 @@
     "fs",
     "file"
   ],
+  "homepage": "https://github.com/lpinca/fs-open-sync",
+  "bugs": "https://github.com/lpinca/fs-open-sync/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lpinca/fs-open-sync.git"
+  },
   "main": "index.js",
   "exports": {
     ".": {
