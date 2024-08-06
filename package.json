@@ -1,0 +1,51 @@
+{
+  "name": "fs-open-sync",
+  "version": "0.0.0",
+  "description": "Open a file",
+  "keywords": [
+    "open",
+    "fs",
+    "file"
+  ],
+  "main": "index.js",
+  "exports": {
+    ".": {
+      "import": "./wrapper.mjs",
+      "require": "./index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">=6.14.2"
+  },
+  "files": [
+    "binding.gyp",
+    "index.js",
+    "prebuilds",
+    "src",
+    "wrapper.mjs"
+  ],
+  "scripts": {
+    "install": "node-gyp-build",
+    "lint": "eslint . && prettier --check --ignore-path .gitignore \"**/*.{json,md,yaml,yml}\"",
+    "test": "nyc --reporter=lcov --reporter=text node --test test.js",
+    "prebuild": "prebuildify --napi --strip --target=8.11.2",
+    "prebuild-darwin-x64+arm64": "prebuildify --arch x64+arm64 --napi --strip --target=8.11.2"
+  },
+  "author": "Luigi Pinca",
+  "license": "MIT",
+  "gypfile": true,
+  "dependencies": {
+    "node-gyp-build": "^4.8.1"
+  },
+  "devDependencies": {
+    "eslint": "^9.8.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^15.9.0",
+    "node-gyp": "^10.2.0",
+    "nyc": "^17.0.0",
+    "prebuildify": "^6.0.1",
+    "prettier": "^3.3.3"
+  }
+}
