@@ -1,6 +1,6 @@
 {
   "name": "fs-open-sync",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Open a file",
   "keywords": [
     "open",
